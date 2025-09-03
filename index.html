@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <h1 class="Dashboard">Dashboard</h1>
+    <div class="block">
+      <div style="display: flex;">
+        <h2 class="Overview">Calories Overview</h2>
+         <button id="open" class="brn">Add <i class="fa-solid fa-plus" style="font-size: 11px;"></i> </button>
+      </div>
+
+    
+         <div class="cards-container">
+        <div class="card card-total">
+            <div class="card-label" style="background-color: #d4f4dd;">Total Calories Taken </div>
+            <div class="card-amount" style="background-color: #d4f4dd;" id="totalCalories" > 0 kcal</div>
+            
+        </div>
+        
+        <div class="card card-highest">
+            <div class="card-label" style="  background-color: #ffeaa7;" >Daily Highest Calories Intake</div>
+            <div class="card-amount" style="  background-color: #ffeaa7;" id="highestCalories" >0 kcal</div>
+            
+        </div>
+        
+        <div class="card card-lowest">
+            <div class="card-label" style="background-color: #ddd6fe;">Daily Lowest Calories Intake</div>
+            <div class="card-amount" style="background-color: #ddd6fe;" id="lowestCalories" >0 kcal</div>
+           
+        </div>
+    </div>
+    </div>
+    <br><br>
+  <div class="expenses-card">
+  <ul style="display: flex;">
+    <li><div class="expenses-header">Recent Calories</div></li>
+    <li style="margin-left: 80%; list-style: none; padding: 10px; margin-top: 5px;">
+      <button class="btn" id="Reset"><p>Reset</p></button>
+    </li>
+  </ul>
+
+  <table class="expenses-table">
+    <thead style="text-align: center;">
+      <tr style="border: none;">
+        <th>Food</th>
+        <th>Category</th>
+        <th>Description</th>
+        <th>Calorie Count</th>
+        <th>Remove Item</th>
+      </tr>
+    </thead>
+
+    <tbody id="CaloriesTableBody">
+
+    </tbody>
+  </table>
+</div>
+
+    <br><br>
+    
+
+
+    <div id="forms" class="formdivv">
+    <div class="formthingy">
+       <span id="close" class="buttonthatwillclosetheform"><i class="fa-solid fa-xmark"></i></span>
+      <h2 class="hr">Add Calories</h2>
+        <form id="calorieForm">
+          <label for="food">Food Name:</label>
+           <input type="text" id="food" name="food" required placeholder="Add the meal you have taken">
+           <label for="food">Category:</label>
+           <input type="text" id="Category" name="food" required placeholder="Lunch, Dinner, Breanfast etc">
+           <label for="food">Description</label>
+           <input type="text" id="Description" name="food" required placeholder="Details on your meal">
+              <label for="calories">Calories:</label>
+                <input type="number" id="calories" name="calories" required placeholder="Calorie Intake">
+                
+                <button type="submit" class="subm">Add</button>
+            </form>
+        </div>
+    </div>    <script src="script.js"></script>
+</body>
+</html>
